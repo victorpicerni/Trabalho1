@@ -17,11 +17,11 @@ REAL {NUMERO}("."{NUMERO})?{EXPOENTE}?
 		return NUM;
 	   }
 
-[+] return ADD;
-[-] return SUB;
-[*] return MUL;
-[/] return DIV;
-[^] return POT;
+[+] return ADICAO;
+[-] return MENOS;
+[*] return VEZES;
+[/] return DIVISAO;
+[^] return POTENCIA;
 [(] return EPAREN;
 [)] return DPAREN;
 \n return EOL;
