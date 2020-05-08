@@ -8,8 +8,6 @@ void yyerror (char *);
 
 DIGITO [0-9]
 NUMERO {DIGITO}+
-EXPOENTE [^]{NUMERO}
-REAL {NUMERO}("."{NUMERO})?{EXPOENTE}?
 
 %%
 
@@ -21,10 +19,10 @@ REAL {NUMERO}("."{NUMERO})?{EXPOENTE}?
 [-] return MENOS;
 [*] return VEZES;
 [/] return DIVISAO;
-[^] return POTENCIA;
+"^" return POTENCIA;
 [(] return EPAREN;
 [)] return DPAREN;
-\n return EOL;
+[\n] return EOL;
 
 
 %%
